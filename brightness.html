@@ -1,0 +1,84 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			/*background: url(background1.jpg) no-repeat center;*/
+			min-height: 300vh;
+			background-size: cover;
+			display:flex;
+			align-items: center;
+			justify-content:center;
+			background-color: white;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			background:#f9f9f9;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			background: #0a85ff;
+			height:3px;
+			outline: none;
+		}
+
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:#333;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.raghav{
+			color:green;
+			position:absolute;
+			top:1500px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<div class="raghav">
+	<a href="action camera.html"><h1>shootlens</h1></a>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>
