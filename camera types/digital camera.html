@@ -1,0 +1,119 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:300px;
+			width: 300px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="digital camera.jpg">
+		<h1>8.Digital Camera:</h1>
+		<p1>Digital camera, device for making digital recordings of images. Texas Instruments Incorporated patented the first filmless electronic camera in 1972. In 1981 Sony Corporation brought out a commercial electronic model, which used a “mini” computer disk drive to store information captured from a video camera. As the cost of electronic components declined and the resolution of the cameras improved, the Eastman Kodak Company began selling professional digital cameras in 1991. Kodak and Apple Computer, which supplied the software for transferring the digital images to a personal computer, introduced the first consumer model in 1994. Digital cameras soon gained market share, gradually relegating most film camera sales to cheap, disposable, single-use models. However, with the introduction of smartphones containing ever more-advanced cameras, digital camera sales fell by 90 percent in the 2010s.<br><br>
+		Unlike film cameras, digital cameras do not have chemical agents (film) and sometimes lack a viewfinder, which is typically replaced by a liquid crystal display (LCD). At the core of a digital camera is a semiconductor device, such as a charge-coupled device (CCD) or a complementary metal-oxide semiconductor (CMOS), which measures light intensity and colour (using different filters) transmitted through the camera’s lenses. When light strikes the individual light receptors, or pixels, on the semiconductor, an electric current is induced and is translated into binary digits for storage within another digital medium, such as flash memory (semiconductor devices that do not need power to retain memory).<br><br>
+		Digital cameras are commonly marketed by their resolution in megapixels (millions of pixels)—for example, a 24.2-megapixel camera has a resolution of 6,016 by 4,016 pixels. Kodak developed the first megapixel camera in 1986; it could produce a film-quality 5 × 7-inch (12.5 × 17.5-cm) print.<br><br>
+</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

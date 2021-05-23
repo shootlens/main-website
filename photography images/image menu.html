@@ -1,0 +1,131 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+	<link rel="stylesheet" type="text/css" href="css\shootlens images.css">
+	<script src="javascript\shootlens images.js"></script>
+		<style>
+		body{
+			background-color: black;
+		}
+		.shootlensimages{
+			margin:10px 50px;
+		}
+		.shootlensimages img{
+			transition: 1s;
+			padding:15px;
+			width:200px;
+		}
+		.shootlensimages img:hover{
+			filter: grayscale(100%);
+			transform: scale(1.1);
+		}
+		/*topup button starts*/
+		.scrollTop{
+       position:fixed;
+       bottom:800px;
+       right: 40px;
+       width: 60px;
+       height:60px;
+       background: #fff url(up.png);
+       border-radius: 50%;
+       background-size: 40px;
+       background-position:center;
+       background-repeat: no-repeat;
+       cursor: pointer;
+       z-index: 100000;
+       visibility: hidden;
+       opacity: 0;
+       transition: 0.5s;
+      }
+      .scrollTop.active{
+      bottom: 40px;
+      visibility: visible;
+      opacity: 1;
+      }
+		/*topup button ends*/
+	</style>
+	<title>shootlens</title>
+</head>
+<body>
+	<div class="shootlensimages">
+		<br><br><br><br><br>
+		<a href="images\shootlens1.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens1.jpg"></a>
+
+		<a href="images\shootlens2.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens2.jpg"></a>
+
+		<a href="images\shootlens3.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens3.jpg"></a>
+
+		<a href="images\shootlens4.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens4.jpg"></a>
+
+		<a href="images\shootlens5.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens5.jpg"></a>
+
+		<a href="images\shootlens6.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens6.jpg"></a>
+
+		<a href="images\shootlens7.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens7.jpg"></a>
+
+		<a href="images\shootlens8.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens8.jpg"></a>
+
+		<a href="images\shootlens9.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens9.jpg"></a>
+
+		<a href="images\shootlens10.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens10.jpg"></a>
+
+		<a href="images\shootlens11.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens11.jpg"></a>
+
+		<a href="images\shootlens13.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens13.jpg"></a>
+
+		<a href="images\shootlens14.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens14.jpg"></a>
+
+		<a href="images\shootlens15.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens15.jpg"></a>  
+
+		<a href="images\shootlens19.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens19.jpg"></a>
+
+		<a href="images\shootlens20.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens20.jpg"></a> 
+
+		<a href="images\shootlens23.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens23.jpg"></a>
+
+		<a href="images\shootlens24.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens24.jpg"></a>
+
+		<a href="images\shootlens25.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens25.jpg"></a>
+
+		<a href="images\shootlens18.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens18.jpg"></a>
+
+		<a href="images\shootlens12.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens12.jpg"></a>
+
+		<a href="images\shootlens16.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens16.jpg"></a>
+
+		<a href="images\shootlens21.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens21.jpg"></a>
+
+		<a href="images\shootlens22.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens22.jpg"></a>
+
+		<a href="images\shootlens26.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens26.jpg"></a>
+
+		<a href="images\shootlens27.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens27.jpg"></a>
+<!--28-->		
+		<a href="images\shootlens22.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens22.jpg"></a>
+		<a href="images\shootlens22.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens22.jpg"></a>
+		<a href="images\shootlens22.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens22.jpg"></a>
+		<a href="images\shootlens22.jpg" data-lightbox="shootlens gallery" data-title="shootlens"><img src="images\shootlens22.jpg"></a>
+	</div>
+		<!--topup button starts-->
+   <div class="scrollTop" onclick="scrollToTop();"></div>
+   <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+      var scroll = document.querySelector('.scrollTop');
+      scroll.classList.toggle("active" , window.scrollY > 500)
+    })
+
+
+
+    function scrollToTop(){
+      window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+      })
+    }
+  </script>
+  <!--topup button ends-->
+</body>
+</html>

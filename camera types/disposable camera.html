@@ -1,0 +1,128 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:300px;
+			width: 400px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="disposable.jpg">
+		<h1>9.Disposable camera:</h1>
+		<p1>Sometimes you just want to capture the moment and not get wrapped up in the technical side – aperture, shutter speed, focus, etc. That’s where disposable cameras come in. With their fixed shutter speed, aperture, and focus, they take the thinking out of photography and just let you live in the moment.<br><br>
+	    A disposable or single-use camera is a simple box camera meant to be used once. Most use fixed-focus lenses. Some are equipped with an integrated flash unit, and there are even waterproof versions for underwater photography. Internally, the cameras use a 135 film or an APS cartridge.<br><br>
+
+        While some disposables contain an actual cartridge as used for loading normal, reusable cameras, others just have the film wound internally on an open spool. The whole camera is handed in for processing. Some of the cameras are recycled, i.e. refilled with film and resold. The cameras are returned for "processing" in the same fashion as film cameras.<br><br>
+
+        In general the one-time-use camera represents a return to the business model pioneered by Kodak for their KODAK camera, predecessor to the Brownie camera; it is particularly popular in situations where a reusable camera would be easily stolen or damaged, when one's regular camera is forgotten, or if one cannot afford a regular camera.<br><br>
+        Disposable cameras are popular with tourists and people traveling around the world to save pictures of their adventures.<br>
+
+        Since the late 1990s, disposable cameras have become increasingly popular as wedding favors. Usually they are placed on tables at wedding receptions to be used by guests to capture their unique perspective of the event. More commonly they are available in colors to match the wedding theme such as ivory, blue, white, gold, etc.<br><br>
+
+        So-called "accident camera kits" containing film-based disposable cameras are increasingly being carried in vehicles to take images as evidence after an accident. The absence of batteries allows instantaneous usage even after extended storage, for example in a glove compartment.<br><br>
+
+        They often have cheap plastic lenses, questionable film quality, fixed focal lengths but quick and 'point and shoot' ease make the disposable camera popular with many photographers who enjoy the 'less than perfect' style these cameras provide, in a move away from digital imagery,which can also be seen in the rise in popularity of 'lomography'. This has also led to a number of 'lost art' type projects where disposable cameras are left in public spaces with a message for anyone finding the camera to take some images and then post the camera back, or pass it on to another person.The low cost of the cameras makes them a perfect tool for these sorts of projects.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>shootlens</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+  text-decoration: none;
+  box-sizing:border-box;
+	}
+  body{
+	margin: 0;
+	padding: 0;
+  background:#262626;
+  font-family:arial;
+  text-decoration: none;
+  box-sizing:border-box;
+  overflow:hidden;
+ }
+.loader{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);	
+}
+.loader h1{
+color:rgba(255,255,255,.1);
+margin:0;
+padding:0;
+background-image:url("waterpng1.png");
+background-repeat: repeat-x;
+-webkit-background-clip:text;
+animation: animate 20s linear infinite;
+font-size:15vw;
+cursor:grab;
+}
+@keyframes animate
+{ 
+  0%{
+  background-position:left 300px top -80px;
+    }
+  40%{
+  background-position:left 800px top -80px;
+    }
+  80%{
+  background-position:left 1800px top -80px;
+    }
+  120%{
+  background-position:left 2400px top -80px;
+    }
+  160%{
+  background-position:left 3000px top -80px;
+    }
+  }
+  /*social icons start*/
+  	@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+  	.raghavsocial
+  	{
+  		position:absolute;
+  		width:40px;
+  		margin-top: 300px;
+  		box-shadow: 2px 2px 8px 0 rgba(0,0,0,.4);
+  		right:0;
+  	}
+  	.raghavsocial a span:before{
+  		position: absolute;
+  		top:50%;
+  		left:-8px;
+  		height:18px
+  		width:18px;
+  		transform:translateY(-50%);
+  	}
+  	.raghavsocial a
+  	{
+       position:relative;
+       display:block;
+       height:50px;
+       width:100%;
+       color:white; 
+       line-height:30px;
+       padding-right: 25%;
+       border-bottom: 1px solid rgba(0,0,0,.4);
+  	}
+  	.raghavsocial a span{
+  		position:relative;
+  		right: 30px;
+  		color: white;
+  		letter-spacing: uppercase;
+  		padding:10px 8px;
+  		border-radius: 3px;
+  		transition: all .4s;
+  		opacity:0;
+  		visibility:hidden;
+  		font-family: 'Open Sans',sans-serif;
+  	}
+  	.raghavsocial a i
+  	{
+  		position:absolute;
+  		top:17px;
+  		left: 15px;
+  		font-size:15px;
+  	}
+  	.raghavsocial a:hover{
+  		width:50px;
+  	}
+  	.raghavsocial a:hover i{
+  		font-size:20px;
+  	}
+  	.raghavsocial a:hover span{
+  		right:100px;
+  		opacity: 1;
+  		visibility: visible;
+  	}
+  	.raghavsocial a:nth-child(1),
+  	.raghavsocial a:nth-child(1)  span,
+  	.raghavsocial a:nth-child(1)  span:before{
+  		background: #4267B2;
+  	}
+  	.raghavsocial a:nth-child(2),
+  	.raghavsocial a:nth-child(2) span,
+  	.raghavsocial a:nth-child(2) span:before{
+  		background: #1DA1f2;
+  	}
+  	.raghavsocial a:nth-child(3),
+  	.raghavsocial a:nth-child(3) span,
+  	.raghavsocial a:nth-child(3) span:before{
+  		background: #E1306C;
+  	}
+  	.raghavsocial a:nth-child(4),
+  	.raghavsocial a:nth-child(4) span,
+  	.raghavsocial a:nth-child(4) span:before{
+  		background: #2867B2;
+  	}
+  	.raghavsocial a:nth-child(5),
+  	.raghavsocial a:nth-child(5) span,
+  	.raghavsocial a:nth-child(5) span:before{
+  		background: #ff0000;
+  	}
+  	/*social icons end*/
+	</style>
+	</head>
+	<body>
+		   <div class="loader">
+		   	<h1>shootlens</h1>
+		   	</div>
+    <!--social icons start-->
+	<div class="raghavsocial">
+  		<a href="https://www.facebook.com/shootlensp/">
+  			<i class="fab fa-facebook-f"></i>
+  			<span>Facebook</span>
+  		</a>
+  		<a href="#">
+  			<i class="fab fa-twitter"></i>
+  			<span>Twitter</span>
+  		</a>
+  		<a  href="https://www.instagram.com/shoot_lens_photography/?hl=en">
+  			<i class="fab fa-instagram"></i>
+  			<span>Instagram</span>
+  		</a>
+  		<a  href="#">
+  			<i class="fab fa-linkedin-in"></i>
+  			<span>LinkedIn</span>
+  		</a>
+  		<a href="https://www.youtube.com/channel/UCXg7X0AwigVbn--1cZQ_Jwg?view_as=subscriber">
+  			<i class="fab fa-youtube"></i>
+  			<span>YouTube</span>
+  		</a>
+  	</div>
+  	<!--social icons end-->
+</body>
+</html>

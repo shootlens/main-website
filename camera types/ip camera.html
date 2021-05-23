@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="ip camera.png">
+		<h1>17.IP Camera:</h1>
+		<p1>An Internet Protocol camera, or IP camera, is a type of digital video camera that receives control data and sends image data via the Internet. They are commonly used for surveillance but unlike analog closed-circuit television (CCTV) cameras, they require no local recording device, only a local area network. Most IP cameras are webcams, but the term IP camera or netcam usually applies only to those that can be directly accessed over a network connection, usually used for surveillance.<br><br>
+		Some IP cameras require support of a central network video recorder (NVR) to handle the recording, video and alarm management. Others are able to operate in a decentralized manner with no NVR needed, as the camera is able to record directly to any local or remote storage media. The first centralized IP camera was Axis Neteye 200, released in 1996 by Axis Communications.<br><br>
+		<b>Ip Camera types:-</b>
+	    Indoor cameras are widely used both residentially and commercially. Depending on their functionality, they're classified as a fixed camera or a Ptz camera. Fixed cameras are generally used to monitor an set area, whereas a PTZ camera can be used to either track motion or manually adjust the monitoring area.
+
+        Outdoor wired cameras, also known as AC powered cameras, are placed in outdoor environments. They are designed to survie weather conditions, such as heat, cold, and rain, and are generally capable of capturing video in low light conditions. They are often rated IP65/IP67 standards to withstand the outdoor environment.
+
+        Wired (AC Powered) or Wired free cameras for homes are IP cameras that have their own independent power source, such as a Solar panel or Battery.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

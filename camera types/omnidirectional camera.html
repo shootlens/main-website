@@ -1,0 +1,134 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:450px;
+			width: 400px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:600px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="omnidirectional camera.png">
+		<h1>24.omnidirectional Camera:</h1>
+		<p1>In photography, an omnidirectional camera (from "omni", meaning all), also known as 360-degree camera, is a camera having a field of view that covers approximately the entire sphere or at least a full circle in the horizontal plane. Omnidirectional cameras are important in areas where large visual field coverage is needed, such as in panoramic photography and robotics.<br><br>
+		A camera normally has a field of view that ranges from a few degrees to, at most, 180°. This means that it captures, at most, light falling onto the camera focal point through a hemisphere. In contrast, an ideal omnidirectional camera captures light from all directions falling onto the focal point, covering a full sphere. In practice, however, most omnidirectional cameras cover only almost the full sphere and many cameras which are referred to as omnidirectional cover only approximately a hemisphere, or the full 360° along the equator of the sphere but excluding the top and bottom of the sphere. In the case that they cover the full sphere, the captured light rays do not intersect exactly in a single focal point.<br><br>
+        Various techniques can be used to generate 360-degree images.<br><br>
+        <b>Cameras with one lens:-</b><br><br>
+        These models are used with a fisheye lens. The lens bends the angle of the shot to take a larger radius of the selected subject. It is not possible to take a complete 360-degree picture with this technique because there is always a dead angle directly behind the lens.<br><br>
+        <b>Cameras with two lenses (Dual Fisheye):-</b><br><br>
+        360-degree cameras with two lenses are probably the most common type, as they can accommodate a full 360-degree angle with two lenses facing each other. A camera takes pictures and videos with an angle of just over 180 degrees, e.g. 220 degrees. These are then converted into a 360-degree object using software. Problems are often caused by stitching errors. This means that an incorrect combination of the images can result in an unclean cut edge that is difficult or impossible to remove.<br><br>
+        <b>Cameras with more than two lenses:-</b><br><br>
+        Depending on the application, manufacturers use more than two camera lenses to produce the images. One of the first cameras was the throwing camera "Panono". It has 36 cameras, which are triggered at the same time at the highest point, if the camera was thrown into the air. The more lenses are installed in the camera, the more difficult it becomes for the software to combine the individual images. The possible stitching problems are less with a good stitching.<br><br>
+        <b>Available Omnidirctional camera's:-</b><br>
+        1.Ricoh<br>
+        2.Insta360<br>
+        3.GoPro<br>
+        4.MadV<br>
+        5.Vuze<br>
+        6.Panono<br>
+        7.Kanado<br>
+        8.Z-CAM<br>
+    </p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 440px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="movie camera.jpg">
+		<h1>22.Movie Camera:</h1>
+		<p1>The movie camera, film camera or cine-camera is a type of photographic camera which takes a rapid sequence of photographs on an image sensor or on a film. In contrast to a still camera, which captures a single snapshot at a time, the movie camera takes a series of images; each image constitutes a "frame". This is accomplished through an intermittent mechanism. The frames are later played back in a movie projector at a specific speed, called the frame rate (number of frames per second). While viewing at a particular frame rate, a person's eyes and brain merge the separate pictures to create the illusion of motion.<br><br>
+	    Since the 2000s, film-based movie cameras have been largely (but not completely) replaced by digital movie cameras.<br><br>
+	    An interesting forerunner to the movie camera was the machine invented by Francis Ronalds at the Kew Observatory in 1845. A photosensitive surface was drawn slowly past the aperture diaphragm of the camera by a clockwork mechanism to enable continuous recording over a 12- or 24-hour period. Ronalds applied his cameras to trace the ongoing variations of scientific instruments and they were used in observatories around the world for over a century.<br><br>
+        In 1876, Wordsworth Donisthorpe proposed a camera to take a series of pictures on glass plates, to be printed on a roll of paper film. In 1889, he would patent a moving picture camera in which the film moved continuously. Another film camera was designed in England by Frenchman Louis Le Prince in 1888. He had built a 16 lens camera in 1887 at his workshop in Leeds. The first 8 lenses would be triggered in rapid succession by an electromagnetic shutter on the sensitive film; the film would then be moved forward allowing the other 8 lenses to operate on the film. After much trial and error, he was finally able to develop a single-lens camera in 1888, which he used to shoot sequences of moving pictures on paper film, including the Roundhay Garden Scene and Leeds Bridge.<br><br>
+        Another early pioneer was the British inventor William Friese-Greene. In 1887, he began to experiment with the use of paper film, made transparent through oiling, to record motion pictures. He also said he attempted using experimental celluloid, made with the help of Alexander Parkes. In 1889, Friese-Greene took out a patent for a moving picture camera that was capable of taking up to ten photographs per second. Another model, built-in 1890, used rolls of the new Eastman celluloid film, which he had perforated. A full report on the patented camera was published in the British Photographic News on February 28, 1890. He showed his cameras and film shot with them on many occasions, but never projected his films in public. He also sent details of his invention to Edison in February 1890, which was also seen by Dickson (see below).<br><br>
+        William Kennedy Laurie Dickson, a Scottish inventor and employee of Thomas Edison, designed the Kinetograph Camera in 1891. The camera was powered by an electric motor and was capable of shooting with the new sprocketed film. To govern the intermittent movement of the film in the camera, allowing the strip to stop long enough so each frame could be fully exposed and then advancing it quickly (in about 1/460 of a second) to the next frame, the sprocket wheel that engaged the strip was driven by an escapement disc mechanism—the first practical system for the high-speed stop-and-go film movement that would be the foundation for the next century of cinematography.<br><br>
+        The Lumière Domitor camera, owned by brothers Auguste and Louis Lumière, was created by Charles Moisson, the chief mechanic at the Lumière works in Lyon in 1894. The camera used paper film 35 millimeters wide, but in 1895, the Lumière brothers shifted to celluloid film, which they bought from New-York’s Celluloid Manufacturing Co. This they covered with their own Etiquette-bleue emulsion, had it cut into strips and perforated.<br><br>
+        In 1894, the Polish inventor Kazimierz Prószyński constructed a projector and camera in one, an invention he called the Pleograph.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

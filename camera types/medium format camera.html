@@ -1,0 +1,120 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 440px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="medium format camera.jpg">
+		<h1>20.Medium Format camera:</h1>
+		<p1>Medium format has traditionally referred to a film format in still photography and the related cameras and equipment that use film. Nowadays, the term applies to film and digital cameras that record images on media larger than 24 mm × 36 mm (0.94 in × 1.42 in) (full-frame) (used in 35 mm (1.4 in) photography), but smaller than 4 in × 5 in (100 mm × 130 mm) (which is considered to be large format photography).<br><br>
+        In digital photography, medium format refers either to cameras adapted from medium-format film photography uses or to cameras making use of sensors larger than that of a 35 mm film frame. Often, medium-format film cameras can be retrofitted with digital camera backs, converting them to digital cameras, but some of these digital backs, especially early models, use sensors smaller than a 35 mm film frame. As of 2013, medium-format digital photography sensors were available in sizes of up to 40.3 by 53.7 mm, with 60 million pixels for use with commonly available professional medium-format cameras. Sensors used in special applications such as spy satellites can be even larger but are not necessarily described as medium-format equipment.<br><br>
+        In the film world, medium format has moved from being the most widely used film size (the 1900s through 1950s) to a niche used by professionals and some amateur enthusiasts, but one which is still substantially more popular than large format. In digital photography, medium format has been a very expensive option, with lower-cost options such as the Fujifilm GFX 50R still retailing for $4,500.<br><br>
+        While at one time a variety of medium-format film sizes were produced, today the vast majority of the medium-format film is produced in the 6 cm 120 and 220 sizes. Other sizes are mainly produced for use in antique cameras, and many people assume 120/220 film is being referred to when the term medium format is used.<br><br>
+        The general rule with consumer cameras—as opposed to specialized industrial, scientific, and military equipment—is the more cameras sold, the more sophisticated the automation features available. Medium-format cameras made since the 1950s are generally less automated than smaller cameras made at the same time, having high image quality as their primary advantage. For example, autofocus became available in consumer 35 mm cameras in 1977, but did not reach medium format until the late 1990s, and has never been available in a consumer large format camera.<br><br></p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

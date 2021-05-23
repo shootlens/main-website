@@ -1,0 +1,118 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="instant camera.jpg">
+		<h1>16.Instant Camera:</h1><p1>The instant camera is a type of camera which uses self-developing film to create a chemically developed print shortly after taking the picture. Polaroid Corporation pioneered (and patented) consumer-friendly instant cameras and film, and were followed by various other manufacturers.<br><br>
+		The invention of commercially viable instant cameras which were easy to use is generally credited to American scientist Edwin Land, who unveiled the first commercial instant camera, the model 95 Land Camera, in 1948, a year after he unveiled the instant film in New York City. The earliest instant camera, which consisted of a camera and portable wet darkroom in a single compartment, was invented in 1923 by Samuel Shlafrock.<br><br>
+		In February 2008, Polaroid filed for Chapter 11 bankruptcy protection for the second time and announced it would discontinue production of its instant films and cameras, shut down three manufacturing facilities, and lay off 450 workers. Sales of the analog film by all makers dropped by at least 25% per year in the first decade of the 21st century. In 2009, Polaroid was acquired by PLR IP Holdings, LLC make which uses the Polaroid brand to market various products often relating to instant cameras. Among the products it markets are a Polaroid branded Fuji Instax instant camera, and various digital cameras and portable printers.<br><br>
+	   As of 2017, film continues to be made by the Polaroid Originals (previously the Impossible Project) for several models of Polaroid camera, and for the 8×10 inch format. Other brands such as Lomography, Leica, Fujifilm, and others have innovated new models and features to their own takes on instant cameras.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

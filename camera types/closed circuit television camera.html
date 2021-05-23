@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:300px;
+			width: 300px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="cctv.jpg">
+		<h1>4.Closed Circuit television Camera:</h1>
+		<p1><br>A closed-circuit television camera can produce images or recordings for surveillance or other private purposes. Cameras can be either video cameras, or digital stills cameras. Walter Bruch was the inventor of the CCTV camera. The main purpose of a CCTV camera is to capture light and convert it into a video signal. Underpinning a CCTV camera is a CCD sensor (Charge Coupled Device). The CCD converts light into an electrical signal and then signal processing converts this electrical signal into a video signal that can be recorded or displayed on screen.<br><br>
+		<B>Video cameras:</B><br>
+		Video cameras are either analogue or digital, which means that they work on the basis of sending analogue or digital signals to a storage device such as a video tape recorder or desktop computer or laptop computer.<br><br>
+		<B>Analogue:</B><br>
+		Can record straight to a video tape recorder which are able to record analogue signals as pictures. If the analogue signals are recorded to tape, then the tape must run at a very slow speed in order to operate continuously. This is because in order to allow a three-hour tape to run for 24 hours, it must be set to run on a slow time lapse basis, usually about four frames per second. In one second, the camera scene can change dramatically. A person for example can have walked a distance of 1 meter, and therefore if the distance is divided into four parts, i.e. four frames or "snapshots" in time, then each frame invariably looks like a blur, unless the subject keeps relatively still.<br><br>
+		Analogue signals can also be converted into a digital signal to enable the recordings to be stored on a PC as digital recordings. In that case the analogue video camera must be plugged directly into a video capture card in the computer, and the card then converts the analogue signal to digital. These cards are relatively cheap, but inevitably the resulting digital signals are compressed 5:1 (MPEG compression) in order for the video recordings to be saved on a continuous basis. Another way to store recordings on a non-analogue media is through the use of a digital video recorder (DVR). Such a device is similar in functionality to a PC with a capture card and appropriate video recording software. Unlike PCs, most DVRs designed for CCTV purposes are embedded devices that require less maintenance and simpler setup than a PC-based solution, for a medium to large number of analogue cameras.<br><br>
+		<B>Digital:</B><br>
+		These cameras do not require a video capture card because they work using a digital signal which can be saved directly to a computer. The signal is compressed 5:1, but DVD quality can be achieved with more compression (MPEG-2 is standard for DVD-video, and has a higher compression ratio than 5:1, with a slightly lower video quality than 5:1 at best, and is adjustable for the amount of space to be taken up versus the quality of picture needed or desired). The highest picture quality of DVD(digital versatile disc) is only slightly lower than the quality of basic 5:1-compression DV. Saving uncompressed digital recordings takes up an enormous amount of hard drive space, and a few hours of uncompressed video could quickly fill up a hard drive. Holiday uncompressed recordings may look fine but one could not run uncompressed quality recordings on a continuous basis. Motion detection is therefore sometimes used as a work around solution to record in uncompressed quality.</p1><br><br>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

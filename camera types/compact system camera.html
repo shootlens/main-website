@@ -1,0 +1,119 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:300px;
+			width: 300px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="compact system camera.jpg">
+		<h1>6.Compact System Camera:</h1>
+		<p1>Compared to DSLR cameras, mirrorless cameras are mechanically simpler and are typically smaller, lighter, and quieter due to the elimination of the moving mirror. While nearly all mirrorless cameras still have a mechanical shutter, many also have an electronic shutter, which completely eliminates any sound. Additionally the lack of a moving mirror reduces vibration that can result in blurred images from camera shake. This provides many filmmakers with a better device for creating their work.<br><br>
+		Mirrorless cameras were somewhat challenged to provide an electronic viewfinder with the clarity low-time-lag responsiveness of the optical viewfinders used on DSLRs (under strong sunlight or when photographing the sky at night).The fact that the image from the lens is always projected onto the image sensor allows for features that are only available in DSLRs when their mirror is locked up into "live view" mode. This includes the ability to show a focus-peaking display, zebra patterning, and face or eye tracking.Moreover, the electronic viewfinder can provide live depth of field preview, can show a poorly-illuminated subject how it would look with correct exposure in real time, and is easier to view the results of an exposure in bright sunlight.<br><br>
+		With the latest phase-detect autofocus available on some mirrorless cameras, autofocus speed and accuracy (in some models) has been shown to be as good as DSLRs. But compared with DSLRs, mirrorless cameras have lower battery lifetime and smaller buffers (to save battery). On-sensor auto-focus is free of the adjustment requirements of the indirect focusing system of the DSLR, and the latest mirrorless cameras can shoot with phase-detect autofocus at up to 20 frames per second using up to 693 focus points—a number exceeding what is available on any DSLR. However, on-sensor phase detection autofocus except Canon's Dual Pixel Autofocus, repurposes pixel sites for autofocus acquisition, meaning image data is partially or entirely missing for the autofocus "pixels", which can cause banding artefacts in the final image.<b><br>
+</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

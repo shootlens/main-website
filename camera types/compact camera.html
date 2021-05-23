@@ -1,0 +1,119 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:300px;
+			width: 300px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="compact camera.jpg">
+		<h1>5.Compact Camera:</h1>
+		<p1>A point-and-shoot camera, also known as a compact camera and sometimes abbreviated to P&S, is a still camera designed primarily for simple operation. Most use focus free lenses or autofocus for focusing, automatic systems for setting the exposure options, and have flash units built in.<br><br>
+		Point-and-shoots are by far the best selling type of separate camera, as distinct from camera phones. They are popular for vernacular photography by people who do not consider themselves photographers but want easy-to-use cameras for snapshots of vacations, parties, reunions and other events. Point-and-shoot camera sales declined after about 2010 as smartphones overtook them in such uses. To overcome market shrinkage, compact camera manufacturers began making higher end versions and with a stylish metal body.<br><br>
+		Most superzoom compact cameras have between 30x and 60x optical zoom, although some have even further zoom and weigh less than 300 grams, much less than bridge cameras and DSLRs. Most of these compact cameras use small 1/2.3" image sensors, but since 2008 a few non-interchangeable lens compact cameras use a larger sensor such as 1" and even APS-C, such as the Fujifilm X100 series, or full frame format such as the Sony Cyber-shot DSC-RX1 series.<br><br>
+		They prioritize intelligent Auto, but some high end point-and-shoot cameras have PASM (program, aperture priority, shutter priority, and manual modes) on the mode dial, raw image format, and hot shoe. None have lens mounts.<br><br></p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap" rel="stylesheet"><!--p1,h1-->
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:6vw;
+			right:7vw;
+			width:25vw;
+			height: 6vw;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8vw;
+			padding:0 2vw;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.brightness-box a{
+			margin:0 4vw;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:1.5vw;
+			height:1.5vw;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:4vw;
+			left: 6vw;
+			height:35vw;
+			width: 35vw;
+		}
+		.actionimage h1{
+			position:relative;
+			top:3vw;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:4vw;
+			font-family: 'Baloo Paaji 2', cursive;		}
+		.actionimage p1{
+			position:absolute;
+			top:35vw;
+			left:7vw;
+			right:30px;
+			color:white;
+			font-size: 2vw;
+			letter-spacing: 0.1vw;
+			font-family: 'Baloo Paaji 2', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="action.png">
+		<h1>1.Action Camera:</h1>
+		<p1>An action or action-cam is a digital camera designed for recording action while being immersed in it.<br>
+		Action cameras are typically compact and rugged,and waterproof at surface-level.They typically can take photos in brust mode and time-lapsemode,as well as record high-definition video<br>
+		<br>
+		The camera is typically worn or mounted in such a way that it can shoot from point of the shooter.Some examples of common places to mount an action camera's are an a hat or similar vehicle.they may also be mounted on atripod or a monopad for handled use.An action camera is usually designed to require minimal interaction once recording has begin,as this allows continuous capture capture of the action without having internet with the camera.A typical action camera records onto a microSD card,and has either a micro-USB or a USB-C connector. <br><br>
+		Action cameras are associated with outdoor sports, and, often attached to helmets, surfboards or handlebars, are an integral part of many extreme sports such as base jumping and wingsuit flying. Sometimes several cameras are used to capture specific perspectives, such as a helmet camera that sees the perspective of the actor in combination with a second camera attached to the environment of the rider, such as a board, wing, handlebar or wrist, that looks back onto the rider and records their reactions.<br><br>
+		The category commonly is associated with the GoPro range of cameras, and many action cameras come with a GoPro mount adapter to take advantage of the accessories available for these cameras. However there are many GoPro alternatives which are entering the market of action cameras in recent times. For e.g. DJI Osmo just released their action camera which has all the capabilities of a GoPro with an addition of a flip screen. That flip screen is proving to be a game changer in the action camera market.<br><br><br><br>
+		<b>The best Action cameras in 2020:</b><br><br>
+		 1.GoPro Hero8 Black.<br><br>
+	  	 2.GoPro Hero7 Black.<br><br>
+	     3.DJI Osmo Action.<br><br>
+		 4.Yi 4k+Action Camera.<br><br>
+		 5.Sony RXO Mark II.<br><br>
+		 6.Olfi One.Five Black.<br><br>
+		 7.TomTom Bandit.<br><br>
+		 8.Olympus Tough TG-Tracker.<br><br>
+		 9.SJCAM SJ8 Pro.<br><br>
+		 10.Garmin VIRB XE.<br><br> 
+		 </p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

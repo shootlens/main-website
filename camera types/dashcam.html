@@ -1,0 +1,129 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:300px;
+			width: 300px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="compact system camera.jpg">
+		<h1>7.Dashcam:</h1>
+		<p1>A dashcam, dashboard camera, car DVR, driving recorder, or event data recorder (EDR) is an onboard camera that continuously records the view through a vehicle's front windscreen and sometimes rear or other windows. Some dashcams include a camera to record the interior of the car in 360 degrees inside camera, usually in a ball form and can automatically send pictures and video using 4G.EDRs and some dashcams also record acceleration/deceleration g-force, speed, steering angle, GPS data, etc.<br><br>
+		A wide-angle 130, 170° or more front camera may be attached to the interior windscreen, to the rear-view mirror (clip on), or to the top of the dashboard, by suction cup or adhesive-tape mount. A rear camera is usually mounted in the rear window or in the registration plate, with a RCA Video output to the display monitor/screen.<br><br>
+		The resolution will determine the overall quality of the video. Full HD or 1080p (1920×1080) is standard for Dash HD cams. Dash cameras may have 1080p, 1296p, 1440p, or higher definition for a front camera and 720p for a back camera and include f/1.8 aperture and night vision mode.<br><br>
+		Dashcams can provide video evidence in the event of a road accident. When parked, dashcams can capture video and picture evidence if vandalism is detected 360° parking monitor and send it to the owner usually employing 4G.<br><br>
+		<B>Uses:</B><br>Dashcams are widespread in Russia as a guard against police corruption and insurance fraud, where they provide additional evidence. They have been called "ubiquitous" and "an on-line obsession," and are so prevalent that dashcam footage was the most common footage of the February 2013 Chelyabinsk meteor, which was documented from at least a dozen angles. Thousands of videos showing automobile and aircraft crashes, close calls, and attempts at insurance fraud have been uploaded to social sharing websites such as YouTube, Facebook, Twitter, Yandex, and other websites.<br><br>
+		In the United Kingdom, sales of dashcams rocketed in 2015, which was the fastest growing consumer electronic, with sales increasing by 395%.<br><br>
+
+        *In China, dashcams were well known by a dramatic event of a road rage.<br><br>
+
+        *Dashcams have also captured numerous aviation accidents, such as National Airlines Flight 102[7] in 2013, TransAsia Airways Flight 235 in 2015 and the Shoreham Airshow crash in 2015.<br><br>
+        <B>Types:</B><br>
+        1.exterior view such as for recording the front view only, the back view, etc.
+        2.cabin or inside viewing mode sometimes also called a taxicam and Uber/Lyft cam.<br><br>
+</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

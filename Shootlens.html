@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>shootlens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--boxsliding starts-->
+  <link rel="stylesheet" type="text/css" href="box sliding original.css">
+   <link rel="stylesheet" type="text/css" href="aos.css">
+  <!--box sliding ends-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"><!--quote h1-->
+   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet"><!--raghavhead h1-->
+ </head>
+  <style>
+     @import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+    *{
+      padding:0;
+      margin:0;
+      text-decoration:none;
+      list-style:none;
+      box-sizing:border-box;
+      scroll-behavior: smooth;
+    }
+    body{
+      font-family:montserrat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(105vh - 35px);
+      background-color: black;
+      overflow-x: hidden;
+    }
+    nav{ 
+      background:Last Dinner;
+      height:8vw;
+      width:100%;
+   }
+   nav ul{
+    float:right;
+    margin-right:1vw;
+   }
+   nav ul li{
+    display:inline-block;
+    line-height:8vw;
+    margin:0 1vw;
+   }
+   nav ul li a{
+    color:white;
+    font-size:1.5vw;
+    padding:1vw 2vw;
+    border-radius:3px;
+    text-transform:uppercase;
+   }
+   nav ul li a:hover{
+    color:skyblue;
+   }
+   .checkbtn{
+    font-size:8vw;
+    color:white;
+    float:right;
+    line-height:10vw;
+    margin-right:5vw;
+    cursor:pointer;
+    display:none;
+   }
+   #check{
+    display:none;
+   }
+   @media (max-width:858px){
+    .checkbtn{
+      display:block;
+  }
+    ul{
+      position:fixed;
+      width:100%;
+      height:100vw;
+      background-color: black;
+      top:10vw;
+      left:-100%;
+      text-align:center;
+      transition:all .5s;
+    }
+    nav ul li{
+      display:block;
+      margin:8vw 0;
+      line-height:0vw;
+    }
+    nav ul li a{
+      font-size:4vw;
+    }
+    a:hover,a.active{
+      background:none;
+      color:red;
+    }
+    #check:checked~ul{
+      left:0;
+    }
+ }
+ /*raghavhead starts*/
+   .raghavhead h1{
+    position:absolute;
+    top:2vw;
+    left:2vw;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+   }
+   /*raghavhead ends*/
+   /*div class quote starts*/
+   .quote{
+      /*background: url("namewhite.png") no-repeat;*/
+      color:white;
+      margin: 0;
+      padding: 5vw;
+   }
+   .quote h1{
+    font-size:5vw;
+    font-family: 'Indie Flower', cursive;
+   }
+   /*quote ends*/
+   /*div class pictureclasses start*/
+  .pictureclass1{
+      position: absolute;
+      left:4vw;
+      top:90vw;  
+   }
+   .pictureclass2{
+      position: absolute;
+      right:4vw; 
+      top:90vw;
+   }
+   .pictureclass3{
+      position: absolute;
+      left:4vw;
+      top:107vw;
+      
+   }
+   .pictureclass4{
+      position: absolute;
+      right:4vw;
+      top:107vw;
+   }
+   .pictureclass5{
+      position: absolute;
+      left:4vw;
+      top:125vw;
+    }
+    .pictureclass6{
+      position: absolute;
+      right:4vw;
+      top:125vw;
+    }
+   .pictureclassn{
+      height: 6vw;
+      width: 6vw;
+      position: absolute;
+      top: 159vw;
+   }
+   /*div class pictureclasses end*/
+   /*topup button starts*/
+    .scrollTop{
+      position:fixed;
+      bottom:140vw;
+      right: 2vw;
+      width: 5vw;
+      height:5vw;
+      background: #fff url(up.png);
+      border-radius: 50%;
+      background-size: 40px;
+      background-position:center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      z-index: 100000;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .scrollTop.active{
+      bottom: 5vw;
+      visibility: visible;
+      opacity: 1;
+    }
+    /*topup button ends*/
+   /*image scrolling starts*/
+   .raghavbg{
+    position:relative;
+    height:40vw;
+    width: 80vw;
+    margin:0;
+    padding:0;
+    top: 4vw;
+    left:10vw;
+   }
+  .raghavload{
+    animation: animate 10s;
+  }
+  .raghavslider{
+    background-position: center;
+    background-size: cover;
+    animation: animate 80s infinite; 
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+  }
+  .raghavcontent{
+    color:#fff;
+    background-color: rgba(0,0,0,0.5);
+  }
+  @keyframes animate{
+    0%{
+      background-image:url("background.jpg");
+    }
+    18%{
+      background-image:url("background1.jpg");
+    }
+    28%{
+      background-image:url("background2.jpg");
+    }
+    38%{
+      background-image:url("background3.jpg");
+    }
+    88%{
+      background-image:url("background4.jpg");
+    }
+  }
+   /*image scrolling ends*/
+  </style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+  <ul>
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="main page\\about.html">About</a></b></li>
+    <li><b><a href="main page\contact.html">Contact</a></b></li>
+  </ul>
+</nav>
+<a href="main page\raghavcss.html"><div class="raghavhead">
+  <h1>Shootlens</h1>
+</div></a>
+
+<!--quote started--->
+<div class="quote">
+  <h1>Every Picture<br>Remembers the feeling<br>you missed....</h1>
+  </div>
+<!--quote ended-->
+
+<!--image scrolling started-->
+<div class="raghavbg">
+  <div class="raghavslider">
+    <div class="raghavload">
+    </div>
+  </div>
+</div>
+    <div class="raghavloader">
+</div>
+<!--image scrolling ended-->
+
+<!--pictureclass1 started-->
+  <div class="pictureclass1">
+   <section>
+      <a href="camera types\camera types main menu.html">
+      <h1 data-aos="zoom-in-down">Are you looking for Camera types?</h1></a>
+   </section>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="aos.js"></script>
+   <script type="text/javascript">
+       AOS.init({
+         offset:200,
+         duration:1000,
+       });
+   </script>
+  </div>
+  <div class="pictureclass2">
+   <section>
+      <a href="learn photography/learn photography.html">
+        <h2 data-aos="zoom-in-down">Learn Photography</h2></a>
+   </section>
+  </div>
+  <div class="pictureclass3">
+   <section>
+      <a href="lens types/types of lens.html">
+        <h3 data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">Categories of Lenses</h3></a>
+   </section>
+  </div>
+  <div class="pictureclass4">
+  <section>
+      <a href="photography categories/categories of photography.html">
+        <h4 data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">Photography Types</h4></a>
+   </section>
+  </div>
+  <div class="pictureclass5">
+  <section>
+      <a href="photography images\image menu.html">
+        <h5 data-aos="fade-up-right">Mobile Photography Images</h5></a>
+   </section>
+  </div>
+  <div class="pictureclass6">
+  <section>
+      <a href="top10 photographers\top 10 photographers.html">
+        <h6 data-aos="fade-up-left">Top 10 Photographer's</h6></a>
+   </section>
+  </div>
+<!--pictureclass1 ended-->
+
+<div class="pictureclassn">
+   <h1>cool</h1>
+   </div>
+   <!--topup button starts-->
+   <div class="scrollTop" onclick="scrollToTop();"></div>
+   <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+      var scroll = document.querySelector('.scrollTop');
+      scroll.classList.toggle("active" , window.scrollY > 500)
+    })
+
+
+
+    function scrollToTop(){
+      window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+      })
+    }
+  </script>
+  <!--topup button ends-->
+</body>
+</html>

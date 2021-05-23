@@ -1,0 +1,124 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:300px;
+			width: 400px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="gun camera.jpg">
+		<h1>12.Gun CAmera:</h1>
+		<p1>Gun cameras are cameras used primarily in aircraft to help measure tactical effectiveness. These cameras are triggered by the firing of a weapon, hence the name.<br><br>
+
+        The use of gun cameras first became common for gunnery training in the 1920s though examples were used during World War I by the British Royal Flying Corps. A special version of the standard Lewis Machine Gun was manufactured as a Camera Gun. During World War II, as the Luftwaffe did with the German Robot II camera, gun cameras were commonly used on operational aircraft to record kills of enemy aircraft. Some of this footage survives to this day and is often the source for stock footage in World War II movies, TV shows or video games.<br><br>
+
+        The term guncam may also refer to software that records video game footage, it is often triggered by the firing of a weapon in a way similar to the original guncams of World War II. Some popular examples of this software are Growler Guncam and Java Guncam.<br><br>
+
+        A "Gun camera" may also refer to a video camera mounted on a gun where the camera has a point of aim indicator, typically a reticle in the form of a crosshair or a red dot, that shows in the video where the gun is being pointed.<br><br>
+
+        Current gun cameras on hand guns are usually located at the top of the barrel, limiting the officers view. Police officers have changed the design where it is located on the bottom of the barrel but also are attempting to make a gun camera start video taping when an officer draws his or her weapon.<br><br></p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

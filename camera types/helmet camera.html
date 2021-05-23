@@ -1,0 +1,127 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="helmet camera.jpg">
+		<h1>13.Helmet Camera:</h1>
+		<p1>A helmet camera, otherwise known as a micro video camera, is an action camera, usually a closed circuit television camera, attached to a helmet allowing someone to make a visual record from their point of view (POV), while keeping their hands and vision free.<br><br><br>
+		<b>Hostory of Helmet camera's:</b><br><br>
+		Archives containing photos of helmet cameras have surfaced over the last decade. One shows Denver Broncos backup quarterback Jacky Lee wearing a helmet camera at football practice in 1965 A mocked-up helmet camera appears in the opening scenes of The Private Afternoons of Pamela Mann, released in 1974, used by a character for voyeurism. Another early and more noble helmet video camera was a 1977 head-mounted camera designed to convert images into tactile sensations for the blind.<br>
+        Almost a decade later, a Canon CI-10 camera was mounted to the side of Dick Garcia's helmet by Aerial Video Systems (AVS) of Burbank, CA at the Nissan USGP 500 World Championship at Carlsbad Raceway in Carlsbad, CA on June 28, 1986. At this time the helmet camera was used commercially. For the first time, images were transmitted live from this camera by AVS via portable microwave to the ABC broadcast truck, then integrated into their live broadcast. This innovative system showed viewers the rider's Point of View of the race as it unfolded.
+        <brf><br>other early innovator of video helmet camera technology was Mark Schulze, who created a system for use while producing The Great Mountain Biking Video in 1987. "Schulze stripped-down a red motorcycle helmet and jury-rigged a mounting for the first consumer color video chip camera. A cable ran from the camera to a padded backpack that contained a Panasonic VHS portable video recorder and a DC-lead-acid battery for power, which made the rig heavy, unwieldy, and hot.<br><br>
+        This pioneering technology brought an engaging perspective to live sports television and action sports videos and eventually gave way to button and lipstick cameras. The helmet cam then became a standard piece of equipment, worn by umpires, catchers, goalies and referees for live television as well as BMX riders, surfers, skiers, skydivers, hockey and soccer players and other sports aficionados, to record and share their experiences.<br><br>
+        In 1991, the World League of American Football introduced the innovation of a miniature camera mounted on the right side of the VSR-3 Riddell helmet worn by quarterbacks. This rig was developed by USA Network and Aerial Video Systems (AVS). An antenna was placed in the crown of the helmet between an inflatable pad and the shell. Each of these Helmet-Cams cost $20,000 and transmitted live game action. These helmet cams were briefly used to provide live player's-eye-view footage in professional American football. However, their use was discontinued after players complained of the extra weight, and TV networks became concerned about the aggressive behavior the cameras captured.<br><br><br>
+        <b>Types of Helmet Camera's:
+        	<br><br></b>
+        Helmet cameras generally fall into two main categories; CMOS and CCD type. Although helmet cameras take on a variety of forms, the majority are small cylindrical cameras resembling a tube of lipstick or a bullet.[citation needed] Helmet cameras may be connected to a video recording device with video input capability, such as a handheld camcorder, or purpose built digital video recorder.<br><br>
+        CCD helmet cameras are based upon the charge-coupled device (CCD) image sensor. They typically operate on 12 VDC power and output an analog type signal. These cameras draw more power than CMOS cameras but offer superior picture quality and better color replication.<br><br>
+        CMOS helmet cameras are based upon the complementary metal–oxide–semiconductor (CMOS) image sensor. They typically operate on 5 VDC and draw very little power. CMOS cameras are also generally smaller than the CCD type.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

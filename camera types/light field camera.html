@@ -1,0 +1,121 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="light field camera.jpg">
+		<h1>18.Light-Field Camera:</h1>
+		<p1>A light field camera, also known as plenoptic camera, captures information about the light field emanating from a scene; that is, the intensity of light in a scene, and also the direction that the light rays are traveling in space. This contrasts with a conventional camera, which records only light intensity.<br><br>
+        One type of light field camera uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type of light field camera. Holograms are a type of film-based light field image.<br><br>
+        The first light field camera was proposed by Gabriel Lippmann in 1908. He called his concept "integral photography". Lippmann's experimental results included crude integral photographs made by using a plastic sheet embossed with a regular array of microlenses, or by partially embedding very small glass beads, closely packed in a random pattern, into the surface of the photographic emulsion.<br><br>
+        In 1992, Adelson and Wang proposed the design of a plenoptic camera that can be used to significantly reduce the correspondence problem in stereo matching. To achieve this, an array of m01icrolenses is placed at the focal plane of the camera main lens. The image sensor is positioned slightly behind the microlenses. Using such images, the displacement of image parts that are not in focus can be analyzed and depth information can be extracted.<br><br>
+        The "standard plenoptic camera" is a standardized mathematical model used by researchers to compare different types of plenoptic (or light field) cameras. By definition the "standard plenoptic camera" has microlenses placed one focal length away from the image plane of a sensor. Research has shown that its maximum baseline is confined to the main lens entrance pupil size which proves to be small compared to stereoscopic setups This implies that the "standard plenoptic camera" may be intended for close range applications as it exhibits increased depth resolution at very close distances that can be metrically predicted based on the camera's parameters.<br><br>
+        In 2004, a team at Stanford University Computer Graphics Laboratory used a 16-megapixel camera with a 90,000-microlens array (meaning that each microlens covers about 175 pixels, and the final resolution is 90 kilopixels) to demonstrate that pictures can be refocused after they are taken.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

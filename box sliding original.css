@@ -1,0 +1,72 @@
+
+    section{
+	    display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+	section h1{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background:#DDD8D8;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius: 2vw;
+		color:black;
+	}
+	section h2{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background:#A2B5CD;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius: 2vw;
+		color:black;
+	}
+	section h3{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background: #8B864E;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius:2vw;
+		color:black;
+	}
+	section h4{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background: #BFCDC6;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius: 2vw;
+		color:black;
+	}
+	section h5{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background:#74698c;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius: 2vw;
+		color:black;
+	}
+	section h6{
+		text-align:center;
+		font-family: sans-serif;
+		font-size: 2vw;
+		background:#78b0a0;
+		text-shadow: 0 2px 5px rgba(0,0,0,.5);
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		padding:5vw;
+		border-radius: 2vw;
+		color:black;
+	}

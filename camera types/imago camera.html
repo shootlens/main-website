@@ -1,0 +1,120 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:130px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="imago camera.jpg">
+		<h1>15.Imago Camera:</h1>
+		<p1>Imago is an analog, walk-in, large format photo camera. It creates life-size self-portraits of people on 62 × 200cm photographic paper via direct exposure. Since a negative is not created, every image is unique and cannot be reprinted. The images are colloquially referred to as "Imago-grams." The only existing camera was built in the 1970s by German physicist Werner Kraus and artist Erhard Hößle. It is based on an optical system invented by Kraus for scientific purposes.<br><br>
+        The camera was in museum storage from 1976 to 2006, when it was rediscovered and rebuilt by the inventor's daughter, artist Susanna Kraus.<br><br>
+        <b>Characteristics of Imago Camera:-</b><br><br>
+        Imago is a large format camera measuring 6.85 × 3.9 × 3.55 meters. It is designed to capture life-size analog images of subjects inside it. The camera is equipped with an optical system, specifically constructed for it, with an extremely high focal length allowing pictures to be taken on a 1:1 scale, without warping. The camera features a special internal setting of six strobe lights providing a high intensity light necessary for production of the large direct exposure images on paper, which is considerably less photosensitive than film. The Camera produces 62 × 200 cm sized black and white prints on Imago and Harman Direct Positive Paper. Inside the camera, one can see a true-sided reflection of oneself in a special mirror, serving as a viewfinder. The picture is taken by the subject releasing a trigger.
+    </p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shootlens</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:black;
+		}
+		/*brightness starts*/
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.container{
+			min-height:30vh;
+			background-size: cover;
+			display:flex;
+			background-color: black;
+		}
+		.brightness-box{
+			position: absolute;
+			top:20px;
+			right:30px;
+			width:300px;
+			height: 60px;
+			/*background:#f9f9f9;*/
+			color:white;
+			border-radius:8px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.brightness-box a{
+			margin:0 10px;
+		}
+
+		#range{
+			width: 100%;
+			-webkit-appearance:none;
+			/*background: #0a85ff;*/
+			height:3px;
+			outline: none;
+		}
+		#range::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			width:22px;
+			height:22px;
+			background:white;
+			/*background:#333;*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		/*brightness ends*/
+		img{
+			position:absolute;
+			top:120px;
+			left: 50px;
+			height:350px;
+			width: 500px;
+		}
+		.actionimage h1{
+			position:relative;
+			top:40px;
+			color: white;
+			text-decoration: underline;
+			cursor:pointer;
+			left:20px;
+		}
+		.actionimage p1{
+			position:absolute;
+			top:500px;
+			left:70px;
+			right:20px;
+			color:white;
+			font-size: 25px;
+			letter-spacing: 1px;
+			font-family: 'Patrick Hand', cursive;
+		}
+	</style>
+</head>
+<body>
+	<!--brightness starts-->
+<div class="container">
+	<div class="brightness-box">
+		<i class="far fa-sun"></i>
+		<input type="range" id="range" min="5" max="100" value="100">
+		<i class="fas fa-sun"></i>
+	</div>
+	<!--brightness ends-->
+	<!--Theory starts-->
+<div class="actionimage">
+	<image src="multiplane camera.jpg">
+		<h1>23.Multiplane Camera:</h1>
+		<p1>The multiplane camera is a motion-picture camera used in the traditional animation process that moves a number of pieces of artwork past the camera at various speeds and at various distances from one another. This creates a sense of parallax or depth.<br><br>
+        Various parts of the artwork layers are left transparent to allow other layers to be seen behind them. The movements are calculated and photographed frame by frame, with the result being an illusion of depth by having several layers of artwork moving at different speeds: the further away from the camera, the slower the speed. The multiplane effect is sometimes referred to as a parallax process.<br><br>
+        An interesting variation is to have the background and foreground move in opposite directions. This creates an effect of rotation. An early example is the scene in Walt Disney's Snow White and the Seven Dwarfs where the Evil Queen drinks her potion, and the surroundings appear to spin around her.<br><br>
+        <b>History:-</b><br><br>
+        In 1933, former Walt Disney Studios animator/director Ub Iwerks invented the first multiplane camera using movable layers of flat artwork in front of a horizontal camera using parts from an old Chevrolet automobile. His multiplane camera was used in a number of the Iwerks Studio's Willie Whopper and Comicolor cartoons of the mid-1930s.<br><br>
+        The technicians at Fleischer Studios created a distantly related device, called the Stereoptical Camera or Setback, in 1934. Their apparatus used three-dimensional miniature sets built to the scale of the animation artwork. The animation cels were placed within the setup so that various objects could pass in front of and behind them, and the entire scene was shot using a horizontal camera. The Tabletop process was used to create distinctive results in Fleischer's Betty Boop, Popeye the Sailor, and Color Classics cartoons.<br><br>
+        The most famous multiplane camera was invented by William Garity for the Walt Disney Studios to be used in the production of Snow White and the Seven Dwarfs.The camera was completed in early 1937 and tested in a Silly Symphony called The Old Mill, which won the 1937 Academy Award for Animated Short Film. Disney's multiplane camera, which used up to seven layers of artwork (painted in oils on glass) shot under a vertical and moveable camera,[4] allowed for more sophisticated uses than the Iwerks or Fleischer versions, and was used prominently in Disney films such as Pinocchio, Fantasia, Bambi, The Adventures of Ichabod and Mr. Toad, Cinderella, Alice in Wonderland, Peter Pan, Sleeping Beauty and The Jungle Book.[citation needed]<br><br>
+        The Little Mermaid was the final Disney film to use a multiplane camera, though the work was done by an outside facility as Disney's cameras were not functional at the time. The process was made obsolete by the implementation of a "digital multiplane camera" feature in the digital CAPS process used for subsequent Disney films and in other computer animation systems. Three original Disney multiplane cameras survive: one at The Walt Disney Studios, Burbank, California, one at the Walt Disney Family Museum in San Francisco, and one in the Art of Disney Animation attraction at Walt Disney Studios Park in Disneyland Paris.</p1>
+</div>
+</div>
+<script>
+	const rangeInput = document.getElementById('range');
+	const container = document.getElementsByClassName('container')[0];
+
+    changeBrightness =() => {
+    	container.style.filter = "brightness("+rangeInput.value + "%)";
+    }
+	rangeInput.addEventListener('change', changeBrightness);
+</script>
+	</body>
+</html>
